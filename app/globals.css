@@ -1,0 +1,46 @@
+@import url('https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.css');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #F8FAFC;
+  --foreground: #0A1628;
+  --muted: #5B6B7E;
+  --border: #E2E8F0;
+
+  --navy: #0A1628;
+  --navy-soft: #1B2A44;
+  --sky: #6BA9E0;
+  --sky-deep: #2C6FBA;
+
+  --grade-mild: #5BA3D0;
+  --grade-caution: #F4A623;
+  --grade-warning: #E27D40;
+  --grade-severe: #D03030;
+}
+
+html, body {
+  background: var(--background);
+  color: var(--foreground);
+  font-family: 'Pretendard Variable', Pretendard, -apple-system, BlinkMacSystemFont, system-ui, Roboto, 'Helvetica Neue', 'Segoe UI', 'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'ss03' on, 'cv11' on;
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+  .scrollbar-hide::-webkit-scrollbar { display: none; }
+  .scrollbar-hide { -ms-overflow-style: none; scrollbar-width: none; }
+}
+
+@layer components {
+  .container-narrow {
+    @apply mx-auto w-full max-w-2xl px-5;
+  }
+  .container-wide {
+    @apply mx-auto w-full max-w-5xl px-5;
+  }
+}
