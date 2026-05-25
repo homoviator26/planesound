@@ -30,7 +30,7 @@ export function GradeDonut({ data }: Props) {
           <PieChart>
             <Tooltip
               contentStyle={{ borderRadius: 12, border: "1px solid #E2E8F0", fontSize: 12 }}
-              formatter={(v: number) => [`${v}명`, "응답"]}
+             formatter={(v) => [`${v ?? 0}명`, "응답"]}
             />
             <Pie
               data={data}
