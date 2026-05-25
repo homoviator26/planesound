@@ -23,7 +23,7 @@ export function MonthlyTrend({ data }: Props) {
           <YAxis tick={{ fontSize: 11, fill: "#64748B" }} />
           <Tooltip
             contentStyle={{ borderRadius: 12, border: "1px solid #E2E8F0", fontSize: 12 }}
-            formatter={(v: number, n: string) => (n === "count" ? [`${v}명`, "응답"] : [`${v}점`, "평균"])}
+             formatter={(v, n) => (n === "count" ? [`${v ?? 0}명`, "응답"] : [`${v ?? 0}점`, "평균"])}
           />
           <Line type="monotone" dataKey="count" stroke="#2C6FBA" strokeWidth={2.5} dot={{ r: 3 }} />
           <Line type="monotone" dataKey="avg" stroke="#0A1628" strokeWidth={2} strokeDasharray="4 4" dot={false} />
