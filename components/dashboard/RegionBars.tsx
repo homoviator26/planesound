@@ -20,7 +20,7 @@ export function RegionBars({ data }: Props) {
           <Tooltip
             cursor={{ fill: "rgba(10,22,40,0.04)" }}
             contentStyle={{ borderRadius: 12, border: "1px solid #E2E8F0", fontSize: 12 }}
-            formatter={(v: number, _n, p) => [`${v}점 · ${p.payload.count}명`, "평균 피해"]}
+           formatter={(v, _n, p) => [`${v ?? 0}점 · ${p?.payload?.count ?? 0}명`, "평균 피해"]}
           />
           <Bar dataKey="avg" fill="#0A1628" radius={[0, 8, 8, 0]} />
         </BarChart>
